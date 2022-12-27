@@ -1,0 +1,605 @@
+
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+
+
+/* Home Page CSS */
+
+/* The main container has three sections: the header, the main and the footer */
+
+#home-page-container {
+	min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150p 3000px 150px;
+    grid-template-areas: 
+    "home-page-header"
+	"home-page-main"
+    "home-page-footer";
+}
+
+	
+/* The Header */
+
+#home-page-header {
+	grid-area: home-page-header;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navigation-bar ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.navigation-bar ul li {
+	padding: 0 15px;
+}
+
+.navigation-bar ul li a{
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+.sign-up{
+	background: #3586ff;
+	color: #fff;
+	border-radius: 20px;
+	padding: 15px 30px;
+}
+
+
+/* The main element has five sections */
+
+
+#home-page-main {
+	grid-area: home-page-main;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: 1fr;
+    grid-template-rows: 400px 1200px 500px 600px 300px;
+    grid-template-areas: 
+	"home-page-main-intro"
+	"home-page-main-featured-coins"
+	"home-page-main-open-account"
+	"home-page-main-testimonials"
+	"home-page-main-subscribe";
+}
+
+
+
+/* Main - Section "Introduction" */
+
+#home-page-intro{
+	grid-area: home-page-main-intro;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/crypto-exchange.jpeg');
+	background-repeat: no-repeat;
+    background-size: cover;
+	color: #fff;
+	text-align: center;
+}
+
+
+#home-page-intro h1 {
+	font-size: 3em;
+	margin-bottom: 0.5em;
+}
+
+#home-page-intro p {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+#home-page-intro button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #00bfa5;
+	color: #fff;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+#home-page-intro button:hover {
+	background-color: #d75b68;
+	}
+	
+
+/* Main - Section "Featured Coins" */
+
+#home-page-featured-coins{
+	grid-area: home-page-main-featured-coins;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+
+.coin {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.Coin-Details{
+	margin-left: 30px;
+	height: 150px;
+	width: 200px;
+}
+
+
+.coin img {
+	width: 100px;
+	height: 100px;
+}
+
+.coin h3 {
+	font-size: 1.5em;
+}
+
+.coin p {
+	font-size: 1.2em;
+	color: #999;
+}
+
+.coin button {
+	font-size: 1.5em;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(231, 112, 112);
+	color: #fff;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+
+
+/* Main - Section "Open an Account" */
+
+#home-page-tutorial-open-account {
+	grid-area: home-page-main-open-account;
+	background-color: #333;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#home-page-tutorial-open-account p{
+	font-size: 2em;
+	font-weight: 300;
+	color: #fff;
+}
+
+
+/* Main - Section "Testimonials" */
+
+#home-page-testimonials {
+	grid-area: home-page-main-testimonials;
+	display: flex;
+	flex-direction: column;
+	background-color: #f8f8f8;
+	padding: 50px;
+}
+
+#home-page-testimonials blockquote {
+	font-size: 1.2em;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+#home-page-testimonials cite {
+	display: block;
+	font-size: 1em;
+	color: #999;
+	text-align: right;
+}
+
+
+/* Main - Section "Subscribe" */
+
+
+
+#home-page-subscribe {
+	grid-area: home-page-main-subscribe;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 50px;
+}
+
+#home-page-subscribe h2 {
+	margin-bottom: 20px;
+}
+
+
+#home-page-subscribe form {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#home-page-subscribe input[type="email"] {
+	width: 200px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+	font-size: 1em;
+}
+
+#home-page-subscribe button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	background-color: #00bfa5;
+	color: #fff;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+
+
+
+
+/* The Footer */
+
+
+#home-page-footer {
+	grid-area: home-page-footer;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #3586ff;
+	color: #fff;
+	padding: 20px 50px;
+}
+
+
+
+#home-page-footer .social-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#home-page-footer .social-media ul, #home-page-footer .links ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;			
+	position: relative;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+
+
+#home-page-footer .social-media li, #home-page-footer .links li {
+	list-style: none;
+}
+
+#home-page-footer .social-media li a {
+	font-size: 2em;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0,5s;
+	
+}
+
+#home-page-footer .links li a {
+	font-size: 1,5em;
+	color: #fff;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0,5s;
+	text-decoration: none;
+}
+
+
+
+
+/* Registration Form CSS */
+
+#registration-page-main {
+	display: flex;
+	flex-direction: column;
+	background-image: url("./img/pexels-worldspectrum-844124.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+	height: 1400px;
+}
+
+.registration-form-logo{
+	display: flex;
+	justify-content: center;
+}
+
+.registration-form-logo img{
+	width: 442px;
+	height: 200px;
+	margin: 10px 0;
+	border-radius: 4px;
+}
+
+
+.Registration-Form {
+display: flex;
+flex-direction: column;
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 4px;
+background-color: #fff;
+}
+
+.Registration-Form .form-group {
+margin-bottom: 20px;
+}
+
+.Registration-Form .form-group-check {
+margin-bottom: 20px;
+display: flex;
+flex-direction: row;
+}
+
+.Registration-Form .form-check-label {
+margin-left: 20px;
+}
+
+
+
+.Registration-Form label {
+font-size: 1.2em;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.Registration-Form input[type="text"],
+.Registration-Form input[type="email"],
+.Registration-Form input[type="password"],
+.Registration-Form input[type="tel"],
+.Registration-Form input[type="date"],
+.Registration-Form input[type="file"]{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+
+.Registration-Form button[type="submit"] {
+width: 100%;
+background-color: #4caf50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 1.2em;
+}
+
+.Registration-Form button[type="submit"]:hover {
+background-color: #45a049;
+}
+
+
+
+
+
+/* The media query applies on the "featured coin" list section where the layout changes depending on the screen size */
+/* The media query applies also on the registration page where the layout changes depending on the screen size */
+
+
+@media (min-width: 768px) {
+
+	.navigation-bar ul li {
+		padding: 0 30px;
+	}
+	
+	.navigation-bar ul li a{
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	#home-page-container {
+		min-height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 150p 2500px 150px;
+		grid-template-areas: 
+		"home-page-header"
+		"home-page-main"
+		"home-page-footer";
+	}
+
+	#home-page-main {
+		grid-area: home-page-main;
+		background-color: #fff;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 400px 700px 500px 600px 300px;
+		grid-template-areas: 
+		"home-page-main-intro"
+		"home-page-main-featured-coins"
+		"home-page-main-open-account"
+		"home-page-main-testimonials"
+		"home-page-main-subscribe";
+	}
+
+	#home-page-featured-coins{
+		grid-area: home-page-main-featured-coins;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.coin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+	}
+
+	#registration-page-main {
+		background-image: url("./img/pexels-worldspectrum-844124.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 1000px;
+	}
+
+	.registration-form-logo img{
+		width: 582px;
+		height: 200px;
+		margin: 10px 0;
+		border-radius: 4px;
+	}
+
+
+	.Registration-Form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	min-width: 540px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	}
+	
+	.Registration-Form .form-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 10px;
+	}
+	
+	.Registration-Form .form-group-check {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.Registration-Form .form-check-label {
+		margin-left: 20px;
+	}
+	
+	
+	
+	.Registration-Form label {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	}
+	
+	.Registration-Form input[type="text"],
+	.Registration-Form input[type="email"],
+	.Registration-Form input[type="password"],
+	.Registration-Form input[type="tel"],
+	.Registration-Form input[type="date"],
+	.Registration-Form input[type="file"]{
+	width: 250px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	}
+	
+	
+	.Registration-Form button[type="submit"] {
+	width: 100%;
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 2em;
+	}
+	
+
+
+
+}
+
+@media (min-width: 1280px) {
+
+	.navigation-bar ul li {
+		padding: 0 30px;
+	}
+
+	#home-page-container {
+		min-height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 150p 2500px 150px;
+		grid-template-areas: 
+		"home-page-header"
+		"home-page-main"
+		"home-page-footer";
+	}
+
+	#home-page-main {
+		grid-area: home-page-main;
+		background-color: #fff;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 400px 700px 500px 600px 300px;
+		grid-template-areas: 
+		"home-page-main-intro"
+		"home-page-main-featured-coins"
+		"home-page-main-open-account"
+		"home-page-main-testimonials"
+		"home-page-main-subscribe";
+	}
+
+	#home-page-featured-coins{
+		grid-area: home-page-main-featured-coins;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.coin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0;
+	}
+
+}
+
+
+
+
+
